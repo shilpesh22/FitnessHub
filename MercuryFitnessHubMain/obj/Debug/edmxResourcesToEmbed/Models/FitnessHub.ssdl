@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MercuryFitnessHubModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MercuryFitnessHub.dbo.EntityMappingDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EntityMappingDetail">
+    <Key>
+      <PropertyRef Name="inEntityId" />
+      <PropertyRef Name="autoMappedEntityTypeId" />
+      <PropertyRef Name="inMappedEntityId" />
+      <PropertyRef Name="flgIsDeleted" />
+    </Key>
+    <Property Name="inEntityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="autoMappedEntityTypeId" Type="int" Nullable="false" />
+    <Property Name="inMappedEntityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="flgIsDeleted" Type="bit" Nullable="false" />
+    <Property Name="stInsUser" Type="varchar" MaxLength="50" />
+    <Property Name="dtInsDate" Type="datetime" />
+    <Property Name="stInsTerm" Type="varchar" MaxLength="50" />
+    <Property Name="stUpdUser" Type="varchar" MaxLength="50" />
+    <Property Name="dtUpdDate" Type="datetime" />
+    <Property Name="stUpdTerm" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EntityMaster">
+    <Key>
+      <PropertyRef Name="inEntityId" />
+    </Key>
+    <Property Name="inEntityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="autoEntityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="autoEntityTypeId" Type="int" />
+    <Property Name="stEntityName" Type="varchar" MaxLength="150" />
+    <Property Name="stEntityCode" Type="varchar" MaxLength="150" />
+    <Property Name="inPEntityId" Type="int" />
+    <Property Name="stName" Type="varchar" MaxLength="200" />
+    <Property Name="stAddress" Type="varchar" MaxLength="500" />
+    <Property Name="inGender" Type="int" />
+    <Property Name="stEmailId" Type="varchar" MaxLength="100" />
+    <Property Name="stContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="stFingureId" Type="varchar" MaxLength="50" />
+    <Property Name="stUserName" Type="varchar" MaxLength="150" />
+    <Property Name="stPassword" Type="varbinary" MaxLength="100" />
+    <Property Name="stRemark" Type="varchar" MaxLength="500" />
+    <Property Name="dbSalary" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="dtJoiningDate" Type="datetime" />
+    <Property Name="dtResignDate" Type="datetime" />
+    <Property Name="flgIsActive" Type="bit" />
+    <Property Name="flgIsDeleted" Type="bit" Nullable="false" />
+    <Property Name="stInsUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dtInsDate" Type="datetime" Nullable="false" />
+    <Property Name="stInsTerm" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="stUpdUser" Type="varchar" MaxLength="50" />
+    <Property Name="dtUpdDate" Type="datetime" />
+    <Property Name="stUpdTerm" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EntityTypeMaster">
+    <Key>
+      <PropertyRef Name="inEntityTypeId" />
+    </Key>
+    <Property Name="inEntityTypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="autoEntityTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stEntityTypeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="stEntityTypeCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="inPEntityTypeId" Type="int" />
+    <Property Name="stRemark" Type="varchar" MaxLength="500" />
+    <Property Name="flgIsDeleted" Type="bit" Nullable="false" />
+    <Property Name="stInsUser" Type="varchar" MaxLength="50" />
+    <Property Name="dtInsDate" Type="datetime" />
+    <Property Name="stInsTerm" Type="varchar" MaxLength="50" />
+    <Property Name="stUpdUser" Type="varchar" MaxLength="50" />
+    <Property Name="dtUpdDate" Type="datetime" />
+    <Property Name="stUpdTerm" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="MercuryFitnessHubModelStoreContainer">
+    <EntitySet Name="EntityMaster" EntityType="Self.EntityMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntityTypeMaster" EntityType="Self.EntityTypeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntityMappingDetail" EntityType="Self.EntityMappingDetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EntityMappingDetail].[inEntityId] AS [inEntityId], 
+    [EntityMappingDetail].[autoMappedEntityTypeId] AS [autoMappedEntityTypeId], 
+    [EntityMappingDetail].[inMappedEntityId] AS [inMappedEntityId], 
+    [EntityMappingDetail].[flgIsDeleted] AS [flgIsDeleted], 
+    [EntityMappingDetail].[stInsUser] AS [stInsUser], 
+    [EntityMappingDetail].[dtInsDate] AS [dtInsDate], 
+    [EntityMappingDetail].[stInsTerm] AS [stInsTerm], 
+    [EntityMappingDetail].[stUpdUser] AS [stUpdUser], 
+    [EntityMappingDetail].[dtUpdDate] AS [dtUpdDate], 
+    [EntityMappingDetail].[stUpdTerm] AS [stUpdTerm]
+    FROM [dbo].[EntityMappingDetail] AS [EntityMappingDetail]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

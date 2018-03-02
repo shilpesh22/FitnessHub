@@ -173,15 +173,34 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="FitnessHub.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FitnessHub.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EntityMappingDetail.cs">
+      <DependentUpon>FitnessHub.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityMaster.cs">
+      <DependentUpon>FitnessHub.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityTypeMaster.cs">
+      <DependentUpon>FitnessHub.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FitnessHub.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessHub.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FitnessHub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessHub.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FitnessHub.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessHub.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoginData.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -198,6 +217,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\FitnessHub.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FitnessHub.edmx</DependentUpon>
+      <LastGenOutput>FitnessHub.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\FitnessHub.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FitnessHub.edmx</DependentUpon>
+      <LastGenOutput>FitnessHub.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -240,10 +269,12 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
-    <Content Include="FitnessHub.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>FitnessHub.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EntityDeploy Include="Models\FitnessHub.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FitnessHub.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\FitnessHub.edmx.diagram">
+      <DependentUpon>FitnessHub.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
@@ -1045,11 +1076,6 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="FitnessHub.dbml.layout">
-      <DependentUpon>FitnessHub.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

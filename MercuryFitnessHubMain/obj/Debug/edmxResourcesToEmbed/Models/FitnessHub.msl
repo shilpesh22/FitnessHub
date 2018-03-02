@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MercuryFitnessHubModelStoreContainer" CdmEntityContainer="MercuryFitnessHubEntitiess1">
+    <EntitySetMapping Name="EntityMasters">
+      <EntityTypeMapping TypeName="MercuryFitnessHubModel.EntityMaster">
+        <MappingFragment StoreEntitySet="EntityMaster">
+          <ScalarProperty Name="inEntityId" ColumnName="inEntityId" />
+          <ScalarProperty Name="autoEntityId" ColumnName="autoEntityId" />
+          <ScalarProperty Name="autoEntityTypeId" ColumnName="autoEntityTypeId" />
+          <ScalarProperty Name="stEntityName" ColumnName="stEntityName" />
+          <ScalarProperty Name="stEntityCode" ColumnName="stEntityCode" />
+          <ScalarProperty Name="inPEntityId" ColumnName="inPEntityId" />
+          <ScalarProperty Name="stName" ColumnName="stName" />
+          <ScalarProperty Name="stAddress" ColumnName="stAddress" />
+          <ScalarProperty Name="inGender" ColumnName="inGender" />
+          <ScalarProperty Name="stEmailId" ColumnName="stEmailId" />
+          <ScalarProperty Name="stContactNo" ColumnName="stContactNo" />
+          <ScalarProperty Name="stFingureId" ColumnName="stFingureId" />
+          <ScalarProperty Name="stUserName" ColumnName="stUserName" />
+          <ScalarProperty Name="stPassword" ColumnName="stPassword" />
+          <ScalarProperty Name="stRemark" ColumnName="stRemark" />
+          <ScalarProperty Name="dbSalary" ColumnName="dbSalary" />
+          <ScalarProperty Name="dtJoiningDate" ColumnName="dtJoiningDate" />
+          <ScalarProperty Name="dtResignDate" ColumnName="dtResignDate" />
+          <ScalarProperty Name="flgIsActive" ColumnName="flgIsActive" />
+          <ScalarProperty Name="flgIsDeleted" ColumnName="flgIsDeleted" />
+          <ScalarProperty Name="stInsUser" ColumnName="stInsUser" />
+          <ScalarProperty Name="dtInsDate" ColumnName="dtInsDate" />
+          <ScalarProperty Name="stInsTerm" ColumnName="stInsTerm" />
+          <ScalarProperty Name="stUpdUser" ColumnName="stUpdUser" />
+          <ScalarProperty Name="dtUpdDate" ColumnName="dtUpdDate" />
+          <ScalarProperty Name="stUpdTerm" ColumnName="stUpdTerm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntityTypeMasters">
+      <EntityTypeMapping TypeName="MercuryFitnessHubModel.EntityTypeMaster">
+        <MappingFragment StoreEntitySet="EntityTypeMaster">
+          <ScalarProperty Name="inEntityTypeId" ColumnName="inEntityTypeId" />
+          <ScalarProperty Name="autoEntityTypeId" ColumnName="autoEntityTypeId" />
+          <ScalarProperty Name="stEntityTypeName" ColumnName="stEntityTypeName" />
+          <ScalarProperty Name="stEntityTypeCode" ColumnName="stEntityTypeCode" />
+          <ScalarProperty Name="inPEntityTypeId" ColumnName="inPEntityTypeId" />
+          <ScalarProperty Name="stRemark" ColumnName="stRemark" />
+          <ScalarProperty Name="flgIsDeleted" ColumnName="flgIsDeleted" />
+          <ScalarProperty Name="stInsUser" ColumnName="stInsUser" />
+          <ScalarProperty Name="dtInsDate" ColumnName="dtInsDate" />
+          <ScalarProperty Name="stInsTerm" ColumnName="stInsTerm" />
+          <ScalarProperty Name="stUpdUser" ColumnName="stUpdUser" />
+          <ScalarProperty Name="dtUpdDate" ColumnName="dtUpdDate" />
+          <ScalarProperty Name="stUpdTerm" ColumnName="stUpdTerm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntityMappingDetails">
+      <EntityTypeMapping TypeName="MercuryFitnessHubModel.EntityMappingDetail">
+        <MappingFragment StoreEntitySet="EntityMappingDetail">
+          <ScalarProperty Name="inEntityId" ColumnName="inEntityId" />
+          <ScalarProperty Name="autoMappedEntityTypeId" ColumnName="autoMappedEntityTypeId" />
+          <ScalarProperty Name="inMappedEntityId" ColumnName="inMappedEntityId" />
+          <ScalarProperty Name="flgIsDeleted" ColumnName="flgIsDeleted" />
+          <ScalarProperty Name="stInsUser" ColumnName="stInsUser" />
+          <ScalarProperty Name="dtInsDate" ColumnName="dtInsDate" />
+          <ScalarProperty Name="stInsTerm" ColumnName="stInsTerm" />
+          <ScalarProperty Name="stUpdUser" ColumnName="stUpdUser" />
+          <ScalarProperty Name="dtUpdDate" ColumnName="dtUpdDate" />
+          <ScalarProperty Name="stUpdTerm" ColumnName="stUpdTerm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

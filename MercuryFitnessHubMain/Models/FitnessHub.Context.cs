@@ -13,10 +13,10 @@ namespace MercuryFitnessHubMain.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MercuryFitnessHubEntities : DbContext
+    public partial class MercuryFitnessHubEntitiess1 : DbContext
     {
-        public MercuryFitnessHubEntities()
-            : base("name=MercuryFitnessHubEntities")
+        public MercuryFitnessHubEntitiess1()
+            : base("name=MercuryFitnessHubEntitiess1")
         {
         }
     

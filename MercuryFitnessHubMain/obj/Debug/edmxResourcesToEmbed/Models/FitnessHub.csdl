@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MercuryFitnessHubModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EntityMaster">
+    <Key>
+      <PropertyRef Name="inEntityId" />
+    </Key>
+    <Property Name="inEntityId" Type="Guid" Nullable="false" />
+    <Property Name="autoEntityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="autoEntityTypeId" Type="Int32" />
+    <Property Name="stEntityName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="stEntityCode" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="inPEntityId" Type="Int32" />
+    <Property Name="stName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="stAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="inGender" Type="Int32" />
+    <Property Name="stEmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="stContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stFingureId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stUserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="stPassword" Type="Binary" MaxLength="100" FixedLength="false" />
+    <Property Name="stRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="dbSalary" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="dtJoiningDate" Type="DateTime" Precision="3" />
+    <Property Name="dtResignDate" Type="DateTime" Precision="3" />
+    <Property Name="flgIsActive" Type="Boolean" />
+    <Property Name="flgIsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="stInsUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dtInsDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="stInsTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stUpdUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dtUpdDate" Type="DateTime" Precision="3" />
+    <Property Name="stUpdTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EntityTypeMaster">
+    <Key>
+      <PropertyRef Name="inEntityTypeId" />
+    </Key>
+    <Property Name="inEntityTypeId" Type="Guid" Nullable="false" />
+    <Property Name="autoEntityTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stEntityTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stEntityTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="inPEntityTypeId" Type="Int32" />
+    <Property Name="stRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="flgIsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="stInsUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dtInsDate" Type="DateTime" Precision="3" />
+    <Property Name="stInsTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stUpdUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dtUpdDate" Type="DateTime" Precision="3" />
+    <Property Name="stUpdTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EntityMappingDetail">
+    <Key>
+      <PropertyRef Name="inEntityId" />
+      <PropertyRef Name="autoMappedEntityTypeId" />
+      <PropertyRef Name="inMappedEntityId" />
+      <PropertyRef Name="flgIsDeleted" />
+    </Key>
+    <Property Name="inEntityId" Type="Guid" Nullable="false" />
+    <Property Name="autoMappedEntityTypeId" Type="Int32" Nullable="false" />
+    <Property Name="inMappedEntityId" Type="Guid" Nullable="false" />
+    <Property Name="flgIsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="stInsUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dtInsDate" Type="DateTime" Precision="3" />
+    <Property Name="stInsTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stUpdUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dtUpdDate" Type="DateTime" Precision="3" />
+    <Property Name="stUpdTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="MercuryFitnessHubEntitiess1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EntityMasters" EntityType="Self.EntityMaster" />
+    <EntitySet Name="EntityTypeMasters" EntityType="Self.EntityTypeMaster" />
+    <EntitySet Name="EntityMappingDetails" EntityType="Self.EntityMappingDetail" />
+  </EntityContainer>
+</Schema>

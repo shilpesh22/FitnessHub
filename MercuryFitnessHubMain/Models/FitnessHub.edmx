@@ -164,7 +164,7 @@ warning 6002: The table/view 'MercuryFitnessHub.dbo.EntityMappingDetail' does no
           <Property Name="dtUpdDate" Type="DateTime" Precision="3" />
           <Property Name="stUpdTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="MercuryFitnessHubEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MercuryFitnessHubEntitiess1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EntityMasters" EntityType="Self.EntityMaster" />
           <EntitySet Name="EntityTypeMasters" EntityType="Self.EntityTypeMaster" />
           <EntitySet Name="EntityMappingDetails" EntityType="Self.EntityMappingDetail" />
@@ -174,7 +174,7 @@ warning 6002: The table/view 'MercuryFitnessHub.dbo.EntityMappingDetail' does no
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MercuryFitnessHubModelStoreContainer" CdmEntityContainer="MercuryFitnessHubEntities">
+        <EntityContainerMapping StorageEntityContainer="MercuryFitnessHubModelStoreContainer" CdmEntityContainer="MercuryFitnessHubEntitiess1">
           <EntitySetMapping Name="EntityMasters">
             <EntityTypeMapping TypeName="MercuryFitnessHubModel.EntityMaster">
               <MappingFragment StoreEntitySet="EntityMaster">

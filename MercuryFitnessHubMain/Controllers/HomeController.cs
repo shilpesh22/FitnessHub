@@ -9,19 +9,15 @@ namespace MercuryFitnessHubMain.Controllers
 {
     public class HomeController : Controller
     {
-        FitnessHubDataContext dc = new FitnessHubDataContext();
+        MercuryFitnessHubEntitiess1 dc = new MercuryFitnessHubEntitiess1();
         public ActionResult Index()
         {
             return View();
         }
-        public JsonResult UserLogin(EntityMaster e)
+        public JsonResult UserLogin(LoginData e)
         {
-            //using (MercuryFitnessHubEntities dc = new MercuryFitnessHubEntities())
-            //{
-
-                var user = dc.EntityMasters.Where(a => a.stUserName.Equals(e.stUserName) && a.stPassword.Equals(Convert.ToByte(e.stPassword))).FirstOrDefault();
-                return new JsonResult { Data = user, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-           // }
+            var user = dc.EntityMasters.Where(a => a.stUserName.Equals(e.stUserName) && a.stPassword.Equals(Convert.ToByte(e.stPassword))).FirstOrDefault();
+            return new JsonResult { Data = user, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
     }
 }
