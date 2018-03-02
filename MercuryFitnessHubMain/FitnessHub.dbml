@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MercuryFitnessHub" Class="FitnessHubDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-5N0A5A0\SQLEXPRESS;Initial Catalog=MercuryFitnessHub;User ID=sa;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MercuryFitnessHubConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EntityMaster" Member="EntityMasters">
+    <Type Name="EntityMaster">
+      <Column Name="inEntityId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="autoEntityId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="autoEntityTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stEntityName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="stEntityCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="inPEntityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="stAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="inGender" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stEmailId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="stContactNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="stFingureId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="stUserName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="stPassword" Type="System.Data.Linq.Binary" DbType="VarBinary(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="stRemark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="dbSalary" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dtJoiningDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dtResignDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="flgIsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="flgIsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="stInsUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dtInsDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="stInsTerm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stUpdUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dtUpdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="stUpdTerm" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

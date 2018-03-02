@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="FitnessHub">
+  <DataContextMoniker Name="/FitnessHubDataContext" />
+  <nestedChildShapes>
+    <classShape Id="28b1921f-cb3c-43c9-b67d-57f46a7437aa" absoluteBounds="1.5, 1.125, 2, 5.8092268880208326">
+      <DataClassMoniker Name="/FitnessHubDataContext/EntityMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e4b2da8-6036-46d7-8e35-b91200e273d3" absoluteBounds="1.5150000000000001, 1.585, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
