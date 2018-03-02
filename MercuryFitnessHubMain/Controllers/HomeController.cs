@@ -16,12 +16,10 @@ namespace MercuryFitnessHubMain.Controllers
         }
         public JsonResult UserLogin(EntityMaster e)
         {
-            //using (MercuryFitnessHubEntities dc = new MercuryFitnessHubEntities())
-            //{
-
+         
                 var user = dc.EntityMasters.Where(a => a.stUserName.Equals(e.stUserName) && a.stPassword.Equals(Convert.ToByte(e.stPassword))).FirstOrDefault();
                 return new JsonResult { Data = user, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-           // }
+         
         }
     }
 }
