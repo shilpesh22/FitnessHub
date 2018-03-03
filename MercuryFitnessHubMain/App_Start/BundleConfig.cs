@@ -10,6 +10,10 @@ namespace MercuryFitnessHubMain
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/plugins").Include(
+                       "~/plugins/iCheck/icheck.min.js",
+                       "~/plugins/jQuery/jQuery-2.1.4.min.js"));
+
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -21,12 +25,18 @@ namespace MercuryFitnessHubMain
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Content/bootstrap/js/bootstrap.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap/css/bootstrap.css",
+                      "~/Content/bootstrap/css/bootstrap.min.css",
+                      "~/Content/css/font-awesome.css",
+                      "~/Content/css/ionicons.min.css",
+                      "~/Content/css/AdminLTE.min.css",
+                      "~/plugins/iCheck/square/blue.css"));
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                       "~/Scripts/angular.min.js",
                        "~/Scripts/angular.js"));
         }
     }

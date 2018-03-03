@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.top-right-block {
+    float: right;
+}
+
+.rigtlable {
+    /*text-align: right;*/
+    padding-top: 5px;
+    font-size: 17px;
+    padding-right: 1px !important;
+}
+
+.clear {
+    height: 35px;
+}
+
+.checkboxpadding label {
+    margin-left: 8px;
+}
+
+.RListControl {
+    padding:0px 20px 0px 10px;
+}

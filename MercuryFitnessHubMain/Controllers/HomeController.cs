@@ -16,7 +16,7 @@ namespace MercuryFitnessHubMain.Controllers
         }
         public JsonResult UserLogin(LoginData e)
         {
-            var user = dc.EntityMasters.Where(a => a.stUserName.Equals(e.stUserName) && a.stPassword.Equals(Convert.ToByte(e.stPassword))).FirstOrDefault();
+            var user = dc.EntityMasters.Where(a => a.stUserName.Equals(e.stUserName) && a.stPassword.Equals(e.stPassword)).FirstOrDefault();
             return new JsonResult { Data = user, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
     }

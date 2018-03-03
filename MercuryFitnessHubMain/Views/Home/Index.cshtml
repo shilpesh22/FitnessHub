@@ -1,16 +1,21 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-@section scripts{
-    <script src="~/Content/jsModel/module.js"></script>
-    <script src="~/Content/jsServices/service.js"></script>
-    <script src="~/Content/jsController/logInController.js"></script>
-}
-
-
+﻿<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MercuryFitnessHub</title>
+    <meta name="description" content="Mercury Fitness Hub">
+    <meta name="keywords" content="Mercury Fitness Hub">
+    <link rel="icon" href="../images/fevicon.png" type="image/png" sizes="16x16" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">    
+    <style>
+        input.ng-invalid {
+            border-color: red ;
+        }
+    </style>
+</head>
 <body class="hold-transition login-page" ng-app="logInModel">
     <div ng-controller="logInController">
-        <form name="f1">
+        <form name="f1" >
             <div class="login-box">
                 <div class="login-logo">
                     <a href="index.cshtml"><b>Mercury</b>Fitness Hub</a>
@@ -19,28 +24,24 @@
                 <div class="login-box-body">
                     <p class="login-box-msg">Sign in to start your session</p>
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" ng-model="LoginData.stUserName" name="userName" placeholder="User Name">
+                        <input type="text" class="form-control" ng-model="LoginData.stUserName" name="userName" placeholder="User Name" required>
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                        @*<span class="error" ng-show="(f1.userName.$dirty || Submitted) && f1.userName.$error.required">Username required</span>*@
-                        @*<span class="error-content" ng-show=""*@
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="password" class="form-control" ng-model="LoginData.stPassword" name="password" placeholder="Password">
-                        @*<span class="error" ng-show="(f1.userName.$dirty || Submitted) && f1.userName.$error.required">Username required</span>*@
+                        <input type="password" class="form-control" ng-model="LoginData.stPassword" name="password" placeholder="Password" required>
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
                     <div class="row">
                         <div class="col-xs-8">
                             <div class="checkbox icheck">
                                 <label>
-                                    <input type="checkbox">
-                                    Remember Me
+                                    <input type="checkbox"> Remember Me
                                 </label>
                             </div>
                         </div>
                         <!-- /.col -->
                         <div class="col-xs-4">
-                            <button type="submit" value="logIn" class="btn btn-primary btn-block btn-flat" ng-click="logIn()">Sign In</button>
+                            <button type="submit" value="logIn" ng-disabled ="f1.$invalid" class="btn btn-primary btn-block btn-flat" ng-click="logIn()">Sign In</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -52,3 +53,6 @@
         </form>
     </div>
 </body>
+<script src="~/Content/jsModel/module.js"></script>
+<script src="~/Content/jsServices/service.js"></script>
+<script src="~/Content/jsController/logInController.js"></script>

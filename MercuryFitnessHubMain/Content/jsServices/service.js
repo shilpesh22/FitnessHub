@@ -4,7 +4,7 @@
         debugger
         var response = $http({
             method: 'POST',
-            url: 'Home/UserLogin',
+            url: 'UserLogin',
             data: JSON.stringify(LoginData),
             headers: { "Content-type": "application/json" }
         });
